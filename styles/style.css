@@ -212,6 +212,7 @@ nav {
   justify-content: center;
   position: relative;
   left: -6rem;
+  text-align: center;
 }
 
 .promo-text {
@@ -256,6 +257,7 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  gap: 2rem;
 }
 
 .top-selling article {
@@ -333,13 +335,99 @@ footer {
 footer .container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 footer .container div {
   min-width: 50%;
 }
 
+.logo-footer img {
+  max-width: 600px;
+}
+
 .copyright-block {
   font-size: 1.5rem;
   line-height: 3rem;
+}
+
+@media screen and (max-width: 1290px) {
+  .promo-content {
+    left: -16rem;
+    z-index: 10;
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .promo .container {
+    grid-template-columns: 1px 1fr;
+}
+
+  .promo-content {
+    left: 0;
+    background-color: hsl(171deg 70% 91% / 51%);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .navigation-list {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .banner-discount .container {
+    grid-template-rows: 300px 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  .banner-title {
+    font-size: 4rem;
+    line-height: 6rem;
+    text-align: center;
+  }
+
+  section h2::after {
+    width: 250px;
+  }
+
+  .logo-footer img {
+    max-width: 300px;
+  }
+
+  .copyright-block {
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .navigation-list {
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+
+  .promo-text {
+    font-size: 1.5rem;
+    line-height: 3rem;
+  }
+
+  .banner-discount .container {
+    grid-template-rows: 200px 1fr;
+  }
+
+  .banner-title {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+
+  .logo-footer img {
+    max-width: 240px;
+  }
 }
